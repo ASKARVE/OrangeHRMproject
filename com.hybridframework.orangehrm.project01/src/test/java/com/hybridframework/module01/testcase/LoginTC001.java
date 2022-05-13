@@ -1,4 +1,4 @@
-package com.hybridframework.module01.testcases;
+package com.hybridframework.module01.testcase;
 
 import org.testng.annotations.Test;
 
