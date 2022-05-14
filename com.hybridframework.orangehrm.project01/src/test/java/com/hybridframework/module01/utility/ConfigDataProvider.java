@@ -35,7 +35,7 @@ public class ConfigDataProvider {
 
 	}
 
-	public String geturl() {
+	public String getURL() {
 		return prop.getProperty("url");
 
 	}
