@@ -12,7 +12,8 @@ public class LoginTC001 extends TestBase {
 		LoginPage login = new LoginPage(driver);
 		login.setUserName(configdataprovider.getUsername());
 		login.setUserName(configdataprovider.getPassword());
-		login.clickOnLoginBtn();
+		login.clickOnLogin();
+		
 		
 		
 //		LoginPage login = new LoginPage(driver);
