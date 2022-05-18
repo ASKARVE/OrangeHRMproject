@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hybridframework.module01.testcases.LoginTC001">
+      <class name="com.hybridframework.module01.testcases.Admin_TC001">
         <methods>
-          <include name="verifyLoginFunctionality"/>
+          <include name="AdminTC"/>
           <include name="init"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.hybridframework.module01.testcases.LoginTC001 -->
+      </class> <!-- com.hybridframework.module01.testcases.Admin_TC001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -8,22 +8,24 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import com.hybridframework.module01.utility.ConfigDataProvider;
+import com.hybridframework.module01.utility.ExcelDataProvider;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
 public class TestBase {
-
+	
 	public WebDriver driver;
+	public String exceldataprovider="./testdata/data.xlsx";
 	public String configdatapath = "./Config/config.properties";
 	public ConfigDataProvider configdataprovider;
-	
+	public ExcelDataProvider exceldata;
 	@BeforeSuite
-	public void init() {
+	public void init() throws Exception {
 		 configdataprovider = new ConfigDataProvider(configdatapath);
+		 exceldata=new ExcelDataProvider(exceldataprovider);
 	}
 	@BeforeTest
 	@Parameters({"browser"})

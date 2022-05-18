@@ -1,5 +1,9 @@
 package com.hybridframework.module01.utility;
 
-public class Helper {
+import com.hybridframework.module01.testbase.TestBase;
 
-}
+public class Helper extends TestBase {
+
+	
+	}
+

@@ -15,10 +15,10 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(name = "txtUsername")
+	@FindBy(css = "#txtUsername")
 	WebElement txtUsername;
 
-	@FindBy(name = "txtPassword")
+	@FindBy(css = "#txtPassword")
 	WebElement txtPassword;
 
 	@FindBy(name = "Submit")
@@ -26,6 +26,7 @@ public class LoginPage {
 
 	public void setUserName(String username) {
 		try {
+			txtUsername.click();
 			txtUsername.clear();
 			txtUsername.sendKeys(username);
 		} catch (Exception e) {
@@ -36,6 +37,7 @@ public class LoginPage {
 
 	public void setPassword(String pass) {
 		try {
+			txtPassword.click();
 			txtPassword.clear();
 			txtPassword.sendKeys(pass);
 		} catch (Exception e) {
@@ -43,21 +45,23 @@ public class LoginPage {
 		}
 	}
 
-	public void clickOnLogin() {
+	public Home_Page clickOnLogin() {
 		try {
 			loginBtn.click();
 			String exp_title = "OrangeHRM";
 			String act_title = driver.getTitle();
 			if (exp_title.equals(act_title)) {
 				Assert.assertTrue(true);
-
+				return new Home_Page(driver);
 			} else {
-				Assert.assertTrue(false);
+				Assert.assertFalse(false);
+				return null;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 
 		}
+		return null;
 	}
 
 }
